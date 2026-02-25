@@ -20,4 +20,13 @@ Doctor Appointment Management System built using ASP.NET Core MVC that allows pa
 2. Navigate to `appsettings.json` and configure your SQL Server connection string.
 3. Ensure the launch settings in the `Properties` folder are configured to your environment.
 4. Run the project to start the application and book appointments.
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   Open your terminal or command prompt and run the following command to download the project source code:
+   ```bash
+   git clone https://github.com/aabdullahsayed/DoctorAppointmentSystem.git
+2. Navigate into the project directory: Change your active directory to the newly cloned repository folder:
 ```
+dotnet run
