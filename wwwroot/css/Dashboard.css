@@ -1,0 +1,152 @@
+﻿:root {
+    --dash-navy: #0a1f33;
+    --dash-teal: #00a8cc;
+    --dash-bg: #f4f8fb;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body {
+    background-color: red;
+}
+
+.dash-header {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.welcome-text h2 {
+    color: royalblue;
+    font-weight: 700;
+    margin: 0;
+}
+
+.welcome-text p {
+    color: #6c757d;
+    margin: 0;
+}
+
+.patient-id-badge {
+    background;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: var(--dash-navy);
+    font-weight: 600;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #eee;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: none;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display:right;
+    justify-content: right;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bg-blue-light { background: rgba(0, 86, 179, 0.1); color: #0056b3; }
+.bg-teal-light { background: rgba(0, 168, 204, 0.1); color: #00a8cc; }
+.bg-purple-light { background: rgba(111, 66, 193, 0.1); color: #6f42c1; }
+
+.stats-info h3 {
+    font-weight: 800;
+    margin: 0;
+    color: var(--dash-navy);
+}
+
+.stats-info span {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.content-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: var(--dash-navy);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-table thead th {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: none;
+}
+
+.custom-table tbody td {
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.status-confirmed { background: rgba(40, 167, 69, 0.1); color: #28a745; }
+.status-pending { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 12px;
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: var(--dash-bg);
+    border-color: var(--dash-teal);
+    color: var(--dash-teal);
+}
+
+.action-btn i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}

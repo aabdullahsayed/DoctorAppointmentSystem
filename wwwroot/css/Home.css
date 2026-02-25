@@ -1,0 +1,150 @@
+﻿/* --- CSS VARIABLES & THEME --- */
+:root {
+    --uimc-navy: #0a1f33;
+    --uimc-teal: #00a8cc;
+    --uimc-light: #f8f9fa;
+    --text-muted: #6c757d;
+    --card-hover-shadow: 0 10px 25px rgba(0, 168, 204, 0.15);
+}
+
+/* --- HERO SECTION --- */
+.hero-wrapper {
+    min-height: 90vh; /* Taller to fit the grid comfortably */
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+/* Abstract Background Circle */
+.hero-bg-circle {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0,168,204,0.04) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- TYPOGRAPHY --- */
+.hero-badge {
+    display: inline-block;
+    background: rgba(10, 31, 51, 0.05);
+    color: var(--uimc-navy);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--uimc-navy);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* --- ROLE SELECTION GRID (The "Logic Form") --- */
+.role-grid-container {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(10, 31, 51, 0.08);
+    border: 1px solid rgba(0,0,0,0.03);
+    max-width: 600px; /* Limits width on large screens */
+    margin: 0 auto;
+}
+
+.role-grid-title {
+    text-align: center;
+    color: var(--uimc-navy);
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    gap: 15px;
+}
+
+/* Individual Role Card (Looks like a button/option) */
+.role-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card:hover {
+    background-color: white;
+    border-color: var(--uimc-teal);
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-3px);
+}
+
+/* Icon styling inside the card */
+.role-icon {
+    font-size: 1.8rem;
+    color: var(--uimc-navy);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.role-card:hover .role-icon {
+    color: var(--uimc-teal);
+}
+
+.role-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.role-card:hover .role-name {
+    color: var(--uimc-navy);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+    .hero-wrapper { flex-direction: column; height: auto; padding: 60px 20px; text-align: center; }
+    .hero-title { font-size: 2.8rem; }
+    .hero-desc { margin: 0 auto 30px auto; }
+    .role-grid-container { margin-top: 30px; width: 100%; padding: 20px; }
+    .role-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 450px) {
+    .role-grid { grid-template-columns: 1fr; } /* Stack on very small screens */
+}
