@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    ViewData["IsFullWidth"] = true;
+}
+
+<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+
+<div class="hero-wrapper">
+    <div class="hero-bg-circle"></div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5">
+                <span class="hero-badge">Portal Access</span>
+                <h1 class="hero-title">
+                    Welcome to <br />
+                    <span style="color: var(--uimc-teal);">UIMC</span>
+                </h1>
+                <p class="hero-desc">
+                    Uttara International Medical Center. <br />
+                    Select your role below to navigate directly to your management portal.
+                </p>
+                <div class="d-flex gap-2">
+                    <a asp-controller="Patient" asp-action="Index" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
+                        <i class="fas fa-users me-2"></i>Patient List
+                    </a>
+                    <a asp-controller="Doctor" asp-action="Index" class="btn btn-primary rounded-pill px-4 fw-bold">
+                        <i class="fas fa-calendar-alt me-2"></i>Doctor Schedule
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="role-grid-container">
+                    <h4 class="role-grid-title">Select Your Dashboard</h4>
+                    
+                    <div class="role-grid">
+
+                        <a asp-controller="Appointment" asp-action="Create" class="role-card">
+                            <i class="fas fa-user-injured role-icon"></i>
+                            <span class="role-name">Patient</span>
+                            <small class="text-muted" style="font-size: 0.7rem;">Book Appointment</small>
+                        </a>
+
+                        <a asp-controller="Doctor" asp-action="Index" class="role-card">
+                            <i class="fas fa-user-doctor role-icon"></i>
+                            <span class="role-name">Doctor</span>
+                            <small class="text-muted" style="font-size: 0.7rem;">Check Slots</small>
+                        </a>
+
+                        
+
+                        <a asp-controller="Patient" asp-action="Create" class="role-card">
+                            <i class="fas fa-headset role-icon"></i>
+                            <span class="role-name">Receptionist</span>
+                            <small class="text-muted" style="font-size: 0.7rem;">Register New</small>
+                        </a>
+
+                        <a asp-controller="Account" asp-action="Login" asp-route-role="Admin" class="role-card">
+                            <i class="fas fa-laptop-medical role-icon"></i>
+                            <span class="role-name">Hospital Admin</span>
+                            <small class="text-muted" style="font-size: 0.7rem;">Manage Doctors</small>
+                        </a>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
